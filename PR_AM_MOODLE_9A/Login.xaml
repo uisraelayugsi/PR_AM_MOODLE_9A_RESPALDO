@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_AM_MOODLE_9A.Login"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="#ffff">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="TitleLabelStyle">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#ffff" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        </Style>
+        <Style TargetType="Entry" x:Key="EntryStyle">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="#3D4A6E" />
+            <Setter Property="PlaceholderColor" Value="#3D4A6E" />
+        </Style>
+        <Style TargetType="Button" x:Key="PrimaryButtonStyle">
+            <Setter Property="BackgroundColor" Value="#ffff" />
+            <Setter Property="TextColor" Value="#3d4a6e" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+        <Style TargetType="Frame" x:Key="EntryFrameStyle">
+            <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,5,0,5" Source="logo2.png" Aspect="AspectFit" HeightRequest="180" WidthRequest="80"></Image>
+
+            <Frame Grid.Row="1" Margin="20,30" Background="#3d4a6e" BorderColor="#3d4a6e" HasShadow="True"  CornerRadius="50" >
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                        <Label Grid.Row="0"  Text="EVA-Modalidad Presencial, Semipresencial" Style="{StaticResource TitleLabelStyle}"></Label>
+                        <Frame Grid.Row="2" Margin="0,1,0,0"  Style="{StaticResource EntryFrameStyle}">
+                            <Entry x:Name="txtNombreUsuario" Placeholder="Usuario" Style="{StaticResource EntryStyle}"/>
+                    </Frame>
+
+                        <Frame Grid.Row="3"  Style="{StaticResource EntryFrameStyle}">
+                            <Entry x:Name="txtEmail" Placeholder="Email" Style="{StaticResource EntryStyle}" />
+                        </Frame>
+
+                        <Button x:Name="btnIngresar" Clicked="btnIngresar_Clicked" Grid.Row="4" Text="Entrar" Style="{StaticResource PrimaryButtonStyle}">
+                        <Button.ImageSource>
+                            <FileImageSource File="ingresar.png"/>
+
+                        </Button.ImageSource>
+                    </Button>
+
+
+
+                </Grid>
+            </Frame>
+        </Grid>
+            
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

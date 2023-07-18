@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_AM_MOODLE_9A.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="TitleLabelStyle">
+                <Setter Property="TextColor" Value="#3d4a6e" />
+                <Setter Property="FontSize" Value="25" />
+                <!-- Otros setters y propiedades personalizadas -->
+            </Style>
+
+            <!-- Agrega más estilos globales según tus necesidades -->
+
+        </ResourceDictionary>
+
+
+    </Application.Resources>
+</Application>

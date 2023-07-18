@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_AM_MOODLE_9A.Inicio"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#ffff">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="TitleLabelStyle">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="#ffff" />
+            <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+        </Style>
+        <Style TargetType="Button" x:Key="PrimaryButtonStyle">
+            <Setter Property="BackgroundColor" Value="#ffff" />
+            <Setter Property="TextColor" Value="#3d4a6e" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Margin="0,20,0,20" Source="logo2.png" Aspect="AspectFit" HeightRequest="180" WidthRequest="80"></Image>
+            <Frame Grid.Row="1" Margin="20,30" Background="#3d4a6e" BorderColor="#3d4a6e" HasShadow="True" CornerRadius="50">
+
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Text="EVA-Modalidad Presencial, Semipresencial, Distancia y Online" Style="{StaticResource TitleLabelStyle}"></Label>
+                    <Button  x:Name="btnHuella" Clicked="btnHuella_Clicked" Grid.Row="3" Text="Acceder con huella digital" Style="{StaticResource PrimaryButtonStyle}">
+                        <Button.ImageSource>
+                            <FileImageSource File="escaneo.png"/>
+                        </Button.ImageSource>
+                    </Button>
+                    <Button x:Name="btnUsuario" Clicked="btnUsuario_Clicked" Grid.Row="4" Text="Acceder con usuario" Style="{StaticResource PrimaryButtonStyle}">
+                        <Button.ImageSource>
+                            <FileImageSource File="usuario.png"/>
+                        </Button.ImageSource>
+                    </Button>
+                </Grid>
+
+
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

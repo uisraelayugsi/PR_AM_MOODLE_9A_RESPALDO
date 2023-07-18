@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_AM_MOODLE_9A.Cursos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid  RowSpacing="20" Padding="20,0,20,0">
+                <Grid.RowDefinitions>
+
+                </Grid.RowDefinitions>
+
+                <Path Grid.Row="0" Margin="-20,0,0,0" Data="m132.34,154.23002l209.00002,0l0,0.66666c-66.50001,28 -156.50001,72.87853 -209.00002,96.76573l0,-10z"
+          Stroke="#3d4a6e" Fill="#3d4a6e" HeightRequest="200" Aspect="Fill" ></Path>
+                <Image  Grid.Row="0" Margin="-18,-20,0,0" Source="logoBlaco.png" Aspect="AspectFit" HeightRequest="160" WidthRequest="130" VerticalOptions="Start" HorizontalOptions="Start" ></Image>
+            </Grid>
+
+            <Label Text="Cursos!"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   Style="{StaticResource TitleLabelStyle}" />
+
+
+
+            <Label x:Name="lblNombre" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblId" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" IsVisible="false" />
+
+            <!-- Tabla de cursos -->
+            <ListView x:Name="ListCurso_ItemSelected" HasUnevenRows="True" ItemsSource="{Binding CursosList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="20">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Nombre completo -->
+                                <Label Text="Nombre completo:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" />
+                                <Label Text="{Binding fullname}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Start" />
+
+                                <!-- Nombre -->
+                                <Label Text="Nombre:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" />
+                                <Label Text="{Binding name}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Start" />
+
+                                <!-- Categoría -->
+                                <Label Text="Categoría:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" />
+                                <Label Text="{Binding category}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Start" HorizontalOptions="Start" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PR_AM_MOODLE_9A.Contenido"
+              Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#ffff" />
+            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="BorderColor" Value="#3d4a6e" />
+            <Setter Property="BorderWidth" Value="1" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label x:Name="lblDatos" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  IsVisible="false"/>
+            <Grid  RowSpacing="20" Padding="20,0,20,0">
+                <Grid.RowDefinitions>
+   
+                </Grid.RowDefinitions>
+
+                <Path Grid.Row="0" Margin="-20,0,0,0" Data="m132.34,154.23002l209.00002,0l0,0.66666c-66.50001,28 -156.50001,72.87853 -209.00002,96.76573l0,-10z"
+          Stroke="#3d4a6e" Fill="#3d4a6e" HeightRequest="200" Aspect="Fill" ></Path>
+                <Image  Grid.Row="0" Margin="-18,-20,0,0" Source="logoBlaco.png" Aspect="AspectFit" HeightRequest="160" WidthRequest="130" VerticalOptions="Start" HorizontalOptions="Start" ></Image>
+            </Grid>
+            <Label x:Name="lblNombre" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+
+            <Button x:Name="btnForo" Text="Foros" Clicked="btnForo_Clicked"  HorizontalOptions="CenterAndExpand">
+                    <Button.ImageSource>
+                    <FileImageSource File="conversacion.png" />
+                </Button.ImageSource>
+
+            </Button>
+            <Label/>
+            <Button x:Name="Notas" Clicked="Notas_Clicked" Text="Notas"  HorizontalOptions="CenterAndExpand" >
+                <Button.ImageSource>
+                    <FileImageSource File="calificaciones.png" />
+                </Button.ImageSource>
+
+            </Button>
+            <Label/>
+            <Button x:Name="Curso" Clicked="txtCurso_Clicked" Text="Curso"  HorizontalOptions="CenterAndExpand" >
+                <Button.ImageSource>
+                    <FileImageSource File="aprender.png" />
+                </Button.ImageSource>
+
+            </Button>
+
+            <Label/>
+
+            <Button x:Name="txtSalir" Clicked="txtSalir_Clicked" Text="Salir"  HorizontalOptions="CenterAndExpand">
+                <Button.ImageSource>
+                    <FileImageSource File="salir.png" />
+                </Button.ImageSource>
+            </Button>
+            <Label/>
+            <Button x:Name="txtEscanea" Clicked="txtEscanea_Clicked" Text="Escanea"  HorizontalOptions="CenterAndExpand" IsVisible="false" >
+                <Button.ImageSource>
+                    <FileImageSource File="salir.png" />
+                </Button.ImageSource>
+            </Button>
+            <Label/>
+            <Label/>
+            <Label/>
+            <Label/>
+
+
+            <Label Grid.Row="8" Text="Desarrollado por " FontAttributes="Bold" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="9" Margin="0,-10,0,0" Text="© 2023 todos los derechos reservados " HorizontalOptions="CenterAndExpand"></Label>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
